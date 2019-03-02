@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +21,11 @@
 			</nav>
 		</div>
 		<main>
-			<p>Loop over all your pages using the `pages` variable inside your templates</p>
-			<pre>
-				{{json pages}}
-			</pre>
+			<ol class="terminal-toc">
+			{{#each pages}}
+				<li><a href="{{this.relativePath}}">{{this.meta.title}}</a></li>
+			{{/each}}
+			</ol>
 		</main>
 	</div>
 </body>

@@ -21,10 +21,13 @@
 			</nav>
 		</div>
 		<main>
+            <div>
+                {{{body}}}
+            </div>
 			<ol class="terminal-toc">
-			{{#each pages}}
-				<li><a href="{{this.relativePath}}">{{this.meta.title}}</a></li>
-			{{/each}}
+                {{#each this.query.data.posts}}
+                    <li><a href="{{this.relativePath}}">{{this.frontmatter.title}}</a></li>
+                {{/each}}
 			</ol>
 		</main>
 	</div>

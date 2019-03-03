@@ -20,10 +20,12 @@
 			</nav>
 		</div>
 		<main>
-			<p>Loop over all your pages using the `pages` variable inside your templates</p>
-			<pre>
-				{{json pages}}
-			</pre>
+            <h1>Loop over all your pages using GraphQL</h1>
+            <ul>
+                {{#each this.query.data.pages}}
+                    <li><a href="{{this.relativePath}}">{{this.frontmatter.title}}</a></li>
+                {{/each}}
+            </ul>
 		</main>
 	</div>
 </body>

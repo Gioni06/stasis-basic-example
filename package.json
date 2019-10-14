@@ -29,6 +29,6 @@
     "sass": "^1.17.2"
   },
   "dependencies": {
-    "stasis-generator": "^0.1.0"
+    "stasis-generator": "^0.3.2"
   }
 }
